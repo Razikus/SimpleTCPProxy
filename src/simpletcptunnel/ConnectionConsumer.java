@@ -19,7 +19,6 @@ public class ConnectionConsumer implements Runnable{
         this.socket = socket;
     }
     
-    
     public void run() {
         try {
             Socket processing = socket;
@@ -36,7 +35,6 @@ public class ConnectionConsumer implements Runnable{
             }
             tunnelConnection.close();
             processing.close();
-            System.out.println("CLOSED");
         } catch(Exception e) {
             e.printStackTrace();
         }
