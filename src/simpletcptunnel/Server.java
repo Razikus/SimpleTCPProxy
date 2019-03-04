@@ -62,7 +62,7 @@ public class Server implements Runnable {
             this.serverSocket = new ServerSocket(this.port, 50, InetAddress.getByName(inetAddress));
             while(true) {
                 Socket s = this.serverSocket.accept();
-                System.out.println("Connection accepted.");
+                System.out.println("Connection accepted - " + s);
                 new Thread(new ConnectionConsumer(s)).start();
             }
         } catch (IOException ex) {
